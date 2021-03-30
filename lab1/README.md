@@ -10,5 +10,5 @@
     <li>Pobiera i zapisuje w tymczasowych zmiennych wartości - obecnego wyniku oraz liczby z pola</li>
     <li>Dynamicznie tworzy funkcję, która zwraca wynik obliczeń i wywołuje ją przypisując wynik do zmiennej</li>
     <li>Ustawia obecny wynik oraz wartość w polu na obliczony wynik</li>
-    <li>anuluje wybór operacji do wykonania</li>
+    <li>czyści wybór operacji do wykonania</li>
 </ol> 
