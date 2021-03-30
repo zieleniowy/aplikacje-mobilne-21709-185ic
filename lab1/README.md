@@ -1,4 +1,4 @@
 # Lab 1 - Kalkulator
 ## opis
-kalkulator zrobiony w React Native przy pomocy aplikacji Expo.
-<img src="readme/1.png" alt="zdjęcie prezentujące aplikację na fizycznym urządzeniu" width="250" height="445">
+<p>kalkulator zrobiony w React Native przy pomocy aplikacji Expo.</p>
+<img src="readme/1.png" alt="zdjęcie prezentujące aplikację na fizycznym urządzeniu" width="250" height="445"/>
