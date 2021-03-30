@@ -2,7 +2,7 @@
 ## wynik
 <p>kalkulator zrobiony w React Native przy pomocy aplikacji Expo.</p>
 <img src="readme/1.png" alt="zdjęcie prezentujące aplikację na fizycznym urządzeniu" width="250" height="445"/>
-### opis fragmentu kodu
+<h3>opis fragmentu kodu</h3>
 <img src="readme/2.png" alt="Fragment kodu reprezentujący obliczenie wyniku" />
 <p>Jest to funkcja odpowiedzialna za właściwe obliczenie wyniku (np.: po kliknięciu "=").</p>
 <ul>
