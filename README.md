@@ -1,1 +1,0 @@
-# aplikacje-mobilne-21709-185ic
