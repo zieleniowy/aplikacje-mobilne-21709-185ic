@@ -216,8 +216,8 @@ const makeStyles = theme => {
         },
         backdropRoot: {
           backgroundColor: 'rgba(0,0,0,.75)', 
-        },
-        backdropContent: {
+          width: '100%',
+          height: '100%',
           alignItems: 'center',
           justifyContent: 'center',
         },

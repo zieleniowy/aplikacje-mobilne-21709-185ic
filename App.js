@@ -14,7 +14,7 @@ import TextField from './core/TextField';
 import Button from './core/Button';
 import Backdrop from './core/Backdrop';
 import Transition from './core/Transition';
-
+import Icon from './icons/ExpandMore';
 const Test = props => {
   const theme = useTheme();
   return <View><Text>{theme.palette.primary.main}</Text></View>
@@ -57,11 +57,11 @@ export default function App() {
          </Transition>
           {/* <TextField color="primary" fullWidth={false} onChange={handleChange} label="To jest coś" value={value} /> */}
 
-        {/* <Backdrop>
-          <Paper>
-            <Text>OKOK</Text>
+        <Backdrop in={shown} onExit={()=>setShown(false)}>
+          <Paper style={{ height: 200, width: 200 }}>
+            <Icon />
           </Paper>
-        </Backdrop> */}
+        </Backdrop>
       </View>
     </ThemeProvider>
   );
