@@ -69,7 +69,22 @@ const defaultTheme = {
         shadowRadius: 16.00,
         elevation: 24,
       }
-    ]
+    ],
+    transitions: {
+      duration: {
+        enter: 225,
+        leave: 195,
+        short: 250,
+        shorter: 200,
+        shortest: 150,
+        standard: 300,
+        complex: 375
+      }
+    },
+    zIndex: {
+      textField: 900,
+      backdrop: 1000
+    }
 }
 const makeStyles = theme => {
     const bg = {};
@@ -164,31 +179,47 @@ const makeStyles = theme => {
             width: '96%',
             alignSelf: 'center',
         },
-        textFieldRoot: {
-            height: 36,
-            alignSelf: 'stretch',
-            width: '100%',
-        },
-        textField: {
-            height: 24,
-            position: 'absolute',
-            bottom: 0,
-            width: '100%',
-            alignSelf: 'stretch'
-        },
-        textFieldLabel: {
-            position: 'absolute',
-            color: theme.palette.divider,
-            top: 16,
+        inputUnderlinedRoot: {
+          overflow: 'hidden',
         },
         divider: {
-            backgroundColor: theme.palette.divider,
-            width: '100%',
-            height: 1,
+          position: 'absolute',
+          bottom: 0,
+          backgroundColor: '#888',
+          height: 1,
+          width: '100%',
+          alignItems: 'center',
+          zIndex: theme.zIndex.textField
         },
-          dividerAbs: {
-            position: 'absolute',
-            bottom: 0,
+        spacer: {
+          paddingTop: 14,
+          opacity: 0,
+        },
+        input: {
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: 16,
+        },
+        typography: {
+          fontSize: 16,
+          color: '#888',
+        },
+        label: {
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+        },
+        w100: {
+          width: '100%',
+        },
+        backdropRoot: {
+          backgroundColor: 'rgba(0,0,0,.75)', 
+        },
+        backdropContent: {
+          alignItems: 'center',
+          justifyContent: 'center',
         },
         ...bg,
         ...colors,
