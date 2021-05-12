@@ -1,5 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
-import { mergeDeepLeft } from 'ramda';
+import { mergeDeepLeft, T } from 'ramda';
 const defaultTheme = {
     palette: {
       primary: { main: '#2196f3', contrastText: '#fff' },
@@ -12,6 +12,28 @@ const defaultTheme = {
     typography: {
       button: {
         fontSize: 18
+      },
+      body1: {
+        fontSize: 15,
+      },
+      h1: {
+        fontSize: 54,
+      },
+      h2: {
+        fontSize: 40,
+      },
+      h3: {
+        fontSize: 30,
+      },
+      h4: {
+        fontSize: 19,
+      },
+      h5: {
+
+      },
+      caption: {
+        fontSize: 14,
+        color: 'rgba(0,0,0,.54)',
       }
     },
     shape: {
@@ -83,7 +105,8 @@ const defaultTheme = {
     },
     zIndex: {
       textField: 900,
-      backdrop: 1000
+      badge: 1000,
+      // backdrop: 1500
     }
 }
 const makeStyles = theme => {
@@ -172,10 +195,28 @@ const makeStyles = theme => {
         borderRadius: {
             borderRadius: theme.shape.borderRadius,
         },
+        borderRadiusCircle: {
+          borderRadius: '50%',
+        },
+        iconButtonRoot: {
+          justifyContent: 'center',
+          alignItems: 'center'
+        },
+        iconButton_small: {
+          width: 36,
+          height: 36,
+        },
+        iconButton_medium: {
+          width: 48,
+          height: 48,
+        },
+        iconButton_large: {
+          width: 96,
+          height: 96
+        },
         container: {
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
+            alignItems: 'flex-start',
+            justifyContent: 'flex-start',
             width: '96%',
             alignSelf: 'center',
         },
@@ -220,6 +261,88 @@ const makeStyles = theme => {
           height: '100%',
           alignItems: 'center',
           justifyContent: 'center',
+        },
+        badgeRoot: {
+          alignSelf: 'flex-start',
+          position: 'relative',
+        },
+        badgeContent: {
+          paddingLeft: theme.spacing(1.5),
+          paddingRight: theme.spacing(1.5),
+          paddingTop: theme.spacing(0.5),
+          paddingBottom: theme.spacing(0.5),
+          borderRadius: '50%',
+          position: 'absolute',
+          zIndex: theme.zIndex.badge,
+        },
+        drawer: {
+          width: '100%',
+        },
+        drawerBackdrop: {
+          justifyContent: 'flex-end' 
+        },
+        drawerPaper: {
+
+        },
+        list: {
+          root: {
+            width: '100%',
+          },
+          item: {
+            padding: theme.spacing(4),
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            flexDirection: 'row',
+          },
+          icon: {
+            paddingRight: theme.spacing(2),
+          },
+          secondaryAction: {
+            
+          },
+          textRoot: {
+            flex: 1,
+          },
+          primaryText: theme.typography.h4,
+          secondaryText: theme.typography.caption
+        },
+        typography: {
+          align_center: { textAlign: 'center' },
+          align_left: { textAlign: 'left' },
+          align_right: { textAlign: 'right' },
+          align_justify: { textAlign: 'justify' },
+
+
+        },
+        table: {
+          root: {
+            width: '100%',
+          },
+          paper: {
+
+          },
+          row: {
+            flexDirection: 'row',
+            minHeight: 48,
+            borderStyle: 'solid',
+            borderColor: 'rgba(0,0,0,.22)',
+            borderBottomWidth: 1,
+            alignItems: 'center',
+            // backgroundColor: 'red',
+            // flex: 1,
+          },
+          cell: {
+            // flex: 1,
+            // flex: 1,
+            // flexDirection: 'row',
+            alignItems: 'flex-start',
+            paddingLeft: theme.spacing(2),
+            paddingRight: theme.spacing(2),
+            paddingTop: theme.spacing(1),
+            paddingBottom: theme.spacing(1),
+
+          },
+
         },
         ...bg,
         ...colors,

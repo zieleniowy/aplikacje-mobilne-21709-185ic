@@ -5,7 +5,7 @@ import ThemeProvider from './ThemeProvider';
 export default function Backdrop(props){
     const styles = useContext(ThemeProvider.StylesContext);
     return (
-        <Modal animationType="fade" visible={props.in}>
+        <Modal transparent={true} presentationStyle="overFullScreen" animationType={props.disableAnimation?"none":"fade"} visible={props.in}>
             <TouchableWithoutFeedback onPress={props.onExit}>
                 <View style={[styles.backdropRoot, props.style]}>
                     <TouchableWithoutFeedback>
