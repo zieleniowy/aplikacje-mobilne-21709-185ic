@@ -7,10 +7,11 @@ const ButtonOutlined = props => {
     const styles = useContext(ThemeProvider.StylesContext);
     return (
         <ButtonBase 
-            styles={{ 
-                paper: styles[`border_${props.color||'default'}`], 
-            }} 
             {...props}
+            styles={{ 
+                ...props.styles,
+                paper: [styles[`border_${props.color||'default'}`], props.styles?.paper], 
+            }} 
         >
             {props.children}
         </ButtonBase>

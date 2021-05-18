@@ -5,16 +5,15 @@ export default function Avatar(props) {
     const styles = useContext(ThemeProvider.StylesContext);
     return (
         <View style={[
-          styles.avatarRoot, 
-          props.size==='small'?styles.avatarRootSmall:props.size==='large'?styles.avatarRootLarge:null, 
+          styles.avatar.root, 
+          props.size==='small'?styles.avatar.root_small:props.size==='large'?styles.avatar.root_large:null, 
           Boolean(props.color)?props.color==='secondary'?styles.bg_secondary:styles.bg_primary:null,
           
         ]}>
           {Boolean(props.src)?
-            <Image style={{ width: 60 }} resizeMode="contain" source={props.src} />
+            <Image style={[styles.avatar[`image_${props.size||'medium'}`]]} resizeMode="contain" source={props.src} />
             :<Text style={[
-              styles.avatarText, 
-              props.size==='small'?styles.avatarTextSmall:props.size==='large'?styles.avatarTextLarge:null,
+              styles.avatar[`text_${props.size||'medium'}`],
               Boolean(props.color)?props.color==='secondary'?styles.colorSecondaryContrast:styles.colorPrimaryContrast:styles.colorDivider
             ]}>{props.children}</Text>
           }

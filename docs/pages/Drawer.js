@@ -1,6 +1,7 @@
 import React from 'react';
-import { Typography, Button, Drawer, Table, TableRow, TableCell } from '../../core/index';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { Typography, Button, Drawer, Table, TableRow, TableCell, Transition } from '../../core/index';
+import { View, ScrollView, StyleSheet, Image } from 'react-native';
+import Example from '../Example';
 
 const propsWidths = [100, 100, 100, 300];
 export default function DrawerPage(props){
@@ -24,6 +25,7 @@ export default function DrawerPage(props){
                 <Button style={styles.btn} onPress={handleDir('bottom')} fullWidth  variant="contained">Z dołu</Button>
             </View>
             <Drawer anchor={dir} open={open} onExit={handleOpen(false)}></Drawer>
+            <Example source={require('../../assets/example-images/drawer.png')} width={2388} height={400} />
             <Typography variant="h2">Propsy</Typography>
             <Table widths={propsWidths}>
                 <TableRow>
@@ -53,7 +55,6 @@ export default function DrawerPage(props){
             </Table>
             <Typography variant="h2">Style</Typography>
             <Typography>Root, Paper</Typography>
-
         </ScrollView>
     );
 
@@ -61,7 +62,7 @@ export default function DrawerPage(props){
 
 const styles = StyleSheet.create({
     root: {
-        height: 1000,
+        height: 1200,
     }, 
     row: {
         flexDirection: 'row',

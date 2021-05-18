@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useContext } from 'react';
 import { StyleSheet, Text, View, TextInput, Animated } from 'react-native';
 import ThemeProvider from './ThemeProvider';
 
-const styles =  StyleSheet.create({
-
-})
 
 const TextField = props => {
     const [focused, setFocused] = React.useState(false);
@@ -12,6 +9,7 @@ const TextField = props => {
     const topAnim = useRef(new Animated.Value(16)).current;
     const fontSizeAnim = useRef(new Animated.Value(16)).current;
     const widthAnim = useRef(new Animated.Value(0)).current;
+    const styles = useContext(ThemeProvider.StylesContext);
 
     const toBottom = () => {
       Animated.timing(topAnim, {
@@ -70,13 +68,12 @@ const TextField = props => {
       }
     }
     useEffect(handleAnim, [props.value, focused])
-    const styles = useContext(ThemeProvider.StylesContext);
     return (
-        <View style={[styles.inputUnderlinedRoot, props.fullWidth&&styles.w100, props.styles?.root]}>
-          <Text style={[styles.spacer, styles.typography,  props.styles?.root]}>{props.label}</Text>
+        <View style={[styles.inputUnderlinedRoot, props.fullWidth&&styles.w100, props.styles?.root, props.style]}>
+          <Text style={[styles.spacer, styles.typography.button,  props.styles?.root]}>{props.label}</Text>
           <Animated.Text style={
             [
-              styles.typography, 
+              styles.typography.button, 
               styles.label,  
               props.styles?.root, 
               { bottom: topAnim, fontSize: fontSizeAnim }, 

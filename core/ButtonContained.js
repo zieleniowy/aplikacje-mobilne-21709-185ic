@@ -7,11 +7,12 @@ const ButtonContained = props => {
     const styles = useContext(ThemeProvider.StylesContext);
     return (
         <ButtonBase 
-            styles={{ 
-                paper: styles[`bg_${props.color||'default'}`], 
-                typography: styles[`color_${props.color||'default'}Contrast`]
-            }} 
             {...props}
+            styles={{ 
+                ...props.styles,
+                paper: [styles[`bg_${props.color||'default'}`], props.styles?.paper], 
+                typography: [styles[`color_${props.color||'default'}Contrast`], props.styles?.typography]
+            }} 
         >
             {props.children}
         </ButtonBase>

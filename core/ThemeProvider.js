@@ -1,5 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
-import { mergeDeepLeft, T } from 'ramda';
+import { mergeDeepLeft } from 'ramda';
 const defaultTheme = {
     palette: {
       primary: { main: '#2196f3', contrastText: '#fff' },
@@ -26,10 +26,10 @@ const defaultTheme = {
         fontSize: 30,
       },
       h4: {
-        fontSize: 19,
+        fontSize: 25,
       },
       h5: {
-
+        fontSize: 22
       },
       caption: {
         fontSize: 14,
@@ -129,32 +129,6 @@ const makeStyles = theme => {
         appBar: {
             width: '100%',
         },
-        avatarRoot: {
-            width: 48,
-            height: 48,
-            borderRadius: 999,
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-            alignSelf: 'flex-start',
-          },
-          avatarText: {
-            fontSize: 20
-          },
-          avatarRootSmall: {
-            width: 32,
-            height: 32
-          },
-          avatarTextSmall: {
-            fontSize: 14
-          },
-          avatarRootLarge: {
-            width: 96,
-            height: 96
-          },
-          avatarTextLarge: {
-            fontSize: 48
-          },
         color_primaryContrast: {
             color: theme.palette.primary.contrastText
         },
@@ -169,6 +143,10 @@ const makeStyles = theme => {
         },
         color_defaultContrast: {
             color: 'rgba(255,255,255,.81)',
+        },
+        border_divider: {
+          borderColor: theme.palette.divider,
+          borderWidth: 1,
         },
         border_default: {
             borderColor: 'rgba(0,0,0,.81)',
@@ -215,10 +193,13 @@ const makeStyles = theme => {
           height: 96
         },
         container: {
-            alignItems: 'flex-start',
-            justifyContent: 'flex-start',
-            width: '96%',
-            alignSelf: 'center',
+            // alignItems: 'flex-start',
+            // justifyContent: 'flex-start',
+            // width: '96%',
+          width: '100%',
+          paddingLeft: theme.spacing(4),
+          paddingRight: theme.spacing(4),
+            // alignSelf: 'center',
         },
         inputUnderlinedRoot: {
           overflow: 'hidden',
@@ -284,6 +265,66 @@ const makeStyles = theme => {
         drawerPaper: {
 
         },
+        buttonGroup: {
+          root: {
+            flexDirection: 'row',
+          },
+          button: {
+            flex: 1,
+          }
+        },
+        radioGroup: {
+          root: {},
+          rootVertical: {},
+          rootHorizontal: { flexDirection: 'row' },
+          buttonRoot: { flexDirection: 'row', alignItems: 'center' },
+          buttonDotRoot: { position: 'absolute', left: 0, },
+          typography: { paddingLeft: theme.spacing(1), paddingRight: theme.spacing(4) }
+        },
+        checkbox: {
+          root: { flexDirection: 'row', alignItems: 'center' },
+          touchable: {},
+          checked: {},
+          unchecked: {}
+        },
+        avatar: {
+          root: {
+            width: 48,
+            height: 48,
+            borderRadius: 999,
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+            alignSelf: 'flex-start',
+          },
+          root_small: {
+            width: 32,
+            height: 32
+          },
+          root_large: {
+            width: 96,
+            height: 96
+          },
+          image_small: {
+            width: 36,
+          },
+          image_medium: {
+              width: 60,
+          },
+          image_large: {
+            width: 116
+          },
+          text_small: {
+            fontSize: 14
+
+          },
+          text_medium: {
+            fontSize: 20
+          },
+          text_large: {
+            fontSize: 48
+          }
+        },  
         list: {
           root: {
             width: '100%',
@@ -303,7 +344,7 @@ const makeStyles = theme => {
           textRoot: {
             flex: 1,
           },
-          primaryText: theme.typography.h4,
+          primaryText: theme.typography.h5,
           secondaryText: theme.typography.caption
         },
         typography: {
@@ -341,6 +382,10 @@ const makeStyles = theme => {
             paddingTop: theme.spacing(1),
             paddingBottom: theme.spacing(1),
 
+          },
+          link: {
+            // textDecorationColor: '#000',
+            textDecorationLine: 'underline'
           },
 
         },
