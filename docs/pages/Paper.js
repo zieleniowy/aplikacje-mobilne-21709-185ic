@@ -19,7 +19,7 @@ export default function PaperPage(props){
             <Typography>KOD: </Typography>
             <Paper style={styles.paper}>
                 <Typography>
-{`<Paper style={styles.paper}>
+{`<Paper style={{ padding: 8, margin: 8 }}>
     <Typography>PAPIER</Typography>
 </Paper>`}
                 </Typography>

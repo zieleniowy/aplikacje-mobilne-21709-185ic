@@ -8,6 +8,7 @@ import DrawerPage from './docs/pages/Drawer';
 import TransitionPage from './docs/pages/Transition';
 import ListPage from './docs/pages/List';
 import PaperPage from './docs/pages/Paper';
+import PortalPage from './docs/pages/Portal';
 import RadioPage from './docs/pages/Radio';
 import CheckboxPage from './docs/pages/Checkbox';
 import BadgePage from './docs/pages/Badge';
@@ -15,6 +16,7 @@ import AvatarPage from './docs/pages/Avatar';
 import LinkPage from './docs/pages/Link';
 import ButtonPage from './docs/pages/Button';
 import TextFieldPage from './docs/pages/TextField';
+import AlertPage from './docs/pages/Alert';
 
 import Home from './docs/pages/Home';
 import Menu from './docs/Menu';
@@ -30,6 +32,7 @@ function App() {
               <Menu />
               <Container>
                 <Route exact path="/" component={Home} />
+                <Route path="/alert" component={AlertPage} />
                 <Route path="/drawer" component={DrawerPage} />
                 <Route path="/transition" component={TransitionPage} />
                 <Route path="/list" component={ListPage} />
@@ -41,7 +44,7 @@ function App() {
                 <Route path="/link" component={LinkPage} />
                 <Route path="/button" component={ButtonPage} />
                 <Route path="/textfield" component={TextFieldPage} />
-
+                <Route path="/portal" component={PortalPage} />
               </Container>
             </SafeAreaView>
         </NativeRouter>

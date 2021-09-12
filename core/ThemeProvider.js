@@ -262,6 +262,85 @@ const makeStyles = theme => {
         drawerBackdrop: {
           justifyContent: 'flex-end' 
         },
+        dialogBackdrop: {
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+        dialogPaper: {
+          padding: theme.spacing(1),
+        },
+        alert: {
+          padding: theme.spacing(2),
+          borderStyle: 'solid',
+          borderRadius: theme.shape.borderRadius,
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        },
+        alertIcon: {
+          marginRight: theme.spacing(2),
+        },
+        alert_error_default: {
+          backgroundColor: 'rgb(253, 237, 237)',
+          color: 'rgb(95, 33, 32)',
+        },
+        alert_error_filled: {
+          backgroundColor: 'rgb(211, 47, 47)',
+          color: 'white',
+        },
+        alert_error_outlined: {
+          backgroundColor: 'rgba(0,0,0,0)',
+          color: 'rgb(95, 33, 32)',
+          borderColor: 'rgb(239, 83, 80)',
+          borderWidth: 1,
+
+        },
+        alert_info_default: {
+          backgroundColor: 'rgb(229, 246, 253)',
+          color: 'rgb(1, 67, 97)',
+        },
+        alert_info_filled: {
+          backgroundColor: 'rgb(2, 136, 209)',
+          color: 'white',
+        },
+        alert_info_outlined: {
+          backgroundColor: 'rgba(0,0,0,0)',
+          color: 'rgb(1, 67, 97)',
+          borderColor: 'rgb(3, 169, 244)',
+          borderWidth: 1,
+
+        },
+        alert_success_default: {
+          backgroundColor: 'rgb(237, 247, 237)',
+          color: 'rgb(30, 70, 32)',
+        },
+        alert_success_filled: {
+          backgroundColor: 'rgb(46, 125, 50)',
+          color: 'white',
+        },
+        alert_success_outlined: {
+          backgroundColor: 'rgba(0,0,0,0)',
+          color: 'rgb(30, 70, 32)',
+          borderColor: 'rgb(76, 175, 80)',
+          borderWidth: 1,
+
+
+        },
+        alert_warning_default: {
+          backgroundColor: 'rgb(255, 244, 229)',
+          color: 'rgb(102, 60, 0)',
+        },
+        alert_warning_filled: {
+          backgroundColor: 'rgb(237, 108, 2)',
+          color: 'white',
+        },
+        alert_warning_outlined: {
+          backgroundColor: 'rgba(0,0,0,0)',
+          color: 'rgb(102, 60, 0)',
+          borderColor: 'rgb(255, 152, 0)',
+          borderWidth: 1,
+
+        },
         drawerPaper: {
 
         },

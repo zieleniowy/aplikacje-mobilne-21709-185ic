@@ -30,7 +30,10 @@ import RadioGroup from './RadioGroup';
 import RadioButton from './RadioButton';
 import Checkbox from './Checkbox';
 import ButtonGroup from './ButtonGroup';
+import Alert from './Alert';
+import Portal from './Portal';
+
 export {
-    AppBar, Avatar, Backdrop, Badge, Button, ButtonBase, ButtonContained, ButtonOutlined, Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemSecondaryAction, ListItemText,
-    Paper, Table, TableCell, TableHeaderRow, TableRow, TextField, ThemeProvider, Transition, Typography, useStyles, useTheme, Link, RadioGroup, RadioButton, Checkbox, ButtonGroup
+    Alert, AppBar, Avatar, Backdrop, Badge, Button, ButtonBase, ButtonContained, ButtonOutlined, Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemSecondaryAction, ListItemText,
+    Paper, Portal, Table, TableCell, TableHeaderRow, TableRow, TextField, ThemeProvider, Transition, Typography, useStyles, useTheme, Link, RadioGroup, RadioButton, Checkbox, ButtonGroup,
 }

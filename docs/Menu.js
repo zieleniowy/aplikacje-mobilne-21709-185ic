@@ -5,6 +5,7 @@ import { Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { useHistory } from 'react-router-native';
 import Home from '../icons/Home';
 const subjects = [
+    { label: 'Alert', to: '/alert' },
     { label: 'AppBar', to: '/appbar' },
     { label: 'Avatar', to: '/avatar' },
     { label: 'Backdrop', to: '/backdrop' },
@@ -17,6 +18,7 @@ const subjects = [
     { label: 'Link', to: '/link' },
     { label: 'List', to: '/list' },
     { label: 'Paper', to: '/paper' },
+    { label: 'Portal', to: '/portal' },
     { label: 'Radio Group', to: '/radio' },
     { label: 'Table', to: '/table' },
     { label: 'TextField', to: '/textfield' },
