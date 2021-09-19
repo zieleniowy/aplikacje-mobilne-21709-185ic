@@ -1,10 +1,8 @@
-import set from 'ramda/src/set';
-import React, { useContext, useEffect, useRef } from 'react';
-import { View, StyleSheet, useWindowDimensions, Animated } from 'react-native';
+import React, { useContext } from 'react';
+import { View, useWindowDimensions, Animated } from 'react-native';
 import Backdrop from './Backdrop';
 import Paper from './Paper';
 import ThemeProvider from './ThemeProvider';
-import useTheme from './useTheme';
 
 export default function Dialog(props) {
     const styles = useContext(ThemeProvider.StylesContext);

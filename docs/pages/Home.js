@@ -1,8 +1,6 @@
 import React from 'react';
-import { Typography, Paper,} from '../../core/index';
+import { Typography, Paper} from '../../core/index';
 import { ScrollView, StyleSheet, useWindowDimensions} from 'react-native';
-import Dialog from '../../core/Dialog';
-
 export default function TransitionPage(props){
     const window = useWindowDimensions();
     return (
@@ -24,9 +22,6 @@ export default function TransitionPage(props){
                     będą korzystać z motywu dostarczonego przez najbliższy w górę drzewa ThemeProvider.
                 </Typography>
             </Paper>
-            <Dialog in={false} onExit={console.log}>
-                <Typography>TEST</Typography>
-            </Dialog>
         </ScrollView>
     );
 

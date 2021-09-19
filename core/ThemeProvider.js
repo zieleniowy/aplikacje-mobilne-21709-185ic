@@ -267,7 +267,7 @@ const makeStyles = theme => {
           alignItems: 'center',
         },
         dialogPaper: {
-          padding: theme.spacing(1),
+          padding: theme.spacing(2),
         },
         alert: {
           padding: theme.spacing(2),

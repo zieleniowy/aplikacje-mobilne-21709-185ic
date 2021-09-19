@@ -1,12 +1,7 @@
 import React from 'react';
-import { Typography, Link, Table, TableRow, TableCell, Paper, Button, ButtonGroup } from '../../core/index';
+import { Typography, Link, Table, TableRow, TableCell, Paper, Button, ButtonGroup, IconButton } from '../../core/index';
 import { View, ScrollView, StyleSheet, Image} from 'react-native';
-import Person from '../../icons/Person';
-import Home from '../../icons/Home';
-import Share from '../../icons/Share';
-import Create from '../../icons/Create';
-import MoreVert from '../../icons/MoreVert';
-
+import { Home } from '../../icons';
 import Example from '../Example';
 
 const propsWidths = [100, 200, 200, 500];
@@ -52,7 +47,12 @@ export default function LinkPage(props){
                     przycisku z grupy. Gdy variant!=="outlined" dodane zostanie obramowanie między przyciskamie w kolorze theme.palette.divider. Grupa zawsze jest fullWidth
                 </Typography>
                 <Example source={require('../../assets/example-images/buttongroup.png')} width={1184} height={400} />
-
+                <Typography variant="h3">Ikona jako przycisk</Typography>
+                <Typography variant="caption">Tag {"<IconButton></IconButton>"}</Typography>
+                <IconButton onPress={()=>alert('<IconButton><HomeIcon/></IconButton>')}>
+                    <Home />
+                </IconButton>
+                <Typography>IconButton z propsów Button'a przyjmuje jedynie onPress. Dodatkowo jako props można przekazać size="small/medium/large"</Typography>
             </Paper>
             <Typography variant="h2">Propsy</Typography>
             <Table widths={propsWidths}>
@@ -80,6 +80,12 @@ export default function LinkPage(props){
                     <TableCell><Typography>false</Typography></TableCell>
                     <TableCell><Typography>Czy przycisk powinien być maksymalnej możliwej szerokości. </Typography></TableCell>
                 </TableRow>               
+                <TableRow>
+                    <TableCell><Typography>onPress</Typography></TableCell>
+                    <TableCell><Typography>Function</Typography></TableCell>
+                    <TableCell><Typography>undefined</Typography></TableCell>
+                    <TableCell><Typography>Funkcja wywoływana po kliknięciu przycisku</Typography></TableCell>
+                </TableRow>               
             </Table>
 
         </ScrollView>
@@ -89,7 +95,7 @@ export default function LinkPage(props){
 
 const styles = StyleSheet.create({
     root: {
-        height: 1600,
+        paddingBottom: 200,
     },
     paper: {
         padding: 8,

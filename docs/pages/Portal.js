@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from "react-native";
 import Portal from '../../core/Portal';
-import { Typography, Paper, List, ListItem, ListItemText, Table, TableRow, TableCell, } from '../../core/index';
+import { Typography, Paper, List, ListItem, ListItemText, Table, TableRow, TableCell, Alert, Link} from '../../core/index';
 import Warning from '../../icons/Warning';
 import Example from '../Example';
 const propsWidths = [110, 200, 200, 500];
@@ -100,6 +100,10 @@ export default function PortalPage(){
                     (Nie nadpiszą propsów przekazanych bezpośrednio do dzieci w portalu wejściowym)
                 </Typography>
             </Paper>
+            <Alert severity="warning">
+                Komponent Portal udostępniłem jako osobny moduł w npm, można z niego korzystać także w zwykłych Reaktowych aplikacjach (nie react-native).
+                <Link url="https://github.com/zieleniowy/rportal">Przejdź do repozytorium</Link>
+            </Alert>
             <View style={{ paddingBottom: 200 }}></View>
         </ScrollView>
     )

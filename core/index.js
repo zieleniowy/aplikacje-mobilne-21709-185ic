@@ -1,3 +1,4 @@
+import Alert from './Alert';
 import AppBar from './AppBar';
 import Avatar from './Avatar';
 import Backdrop from './Backdrop';
@@ -7,6 +8,7 @@ import ButtonBase from './ButtonBase';
 import ButtonContained from './ButtonContained';
 import ButtonOutlined from './ButtonOutlined';
 import Container from './Container';
+import Dialog from './Dialog';
 import Drawer from './Drawer';
 import IconButton from './IconButton';
 import List from './List';
@@ -30,10 +32,10 @@ import RadioGroup from './RadioGroup';
 import RadioButton from './RadioButton';
 import Checkbox from './Checkbox';
 import ButtonGroup from './ButtonGroup';
-import Alert from './Alert';
 import Portal from './Portal';
 
 export {
-    Alert, AppBar, Avatar, Backdrop, Badge, Button, ButtonBase, ButtonContained, ButtonOutlined, Container, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemSecondaryAction, ListItemText,
-    Paper, Portal, Table, TableCell, TableHeaderRow, TableRow, TextField, ThemeProvider, Transition, Typography, useStyles, useTheme, Link, RadioGroup, RadioButton, Checkbox, ButtonGroup,
+    Alert, AppBar, Avatar, Backdrop, Badge, Button, ButtonBase, ButtonContained, ButtonOutlined, Container, Drawer, Dialog, IconButton, List, ListItem,
+    ListItemIcon, ListItemSecondaryAction, ListItemText, Paper, Portal, Table, TableCell, TableHeaderRow, TableRow, TextField, ThemeProvider, Transition, 
+    Typography, useStyles, useTheme, Link, RadioGroup, RadioButton, Checkbox, ButtonGroup, 
 }
